@@ -1,0 +1,104 @@
+﻿@model Student
+
+@{
+    ViewData["Title"] = "Edit Student";
+    string emailRegexPattern = @"^[^\s@]+@[^\s@]+\.[^\s@]+$";
+}
+
+<h1>Edit Student</h1>
+
+<form id="editStudentForm">
+    <div class="mb-3">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" value="@Model.Name" required>
+        <span id="nameError" style="color: red;"></span>
+    </div>
+    <div class="mb-3">
+        <label for="phone">Phone:</label>
+        <input type="text" class="form-control" id="phone" name="phone" value="@Model.Phone" required>
+        <span id="phoneError" style="color: red;"></span>
+    </div>
+    <div class="mb-3">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" value="@Model.Email" required>
+        <span id="emailError" style="color: red;"></span>
+    </div>
+    <input type="hidden" id="studentId" name="studentId" value="@Model.Id" />
+    <button type="submit" class="btn btn-success">Save Changes</button>
+    <a asp-action="Index" class="btn btn-success">Back To List</a>
+</form>
+
+<div id="resultMessage" class="mt-3"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Function to handle form submit
+        $('#editStudentForm').submit(function (e) {
+            e.preventDefault(); 
+
+            // Get form data
+            var id = $('#studentId').val();
+            var name = $('#name').val();
+            var phone = $('#phone').val();
+            var email = $('#email').val();
+
+            // data validation
+            var isValid = true;
+
+            if (name.trim() === '') {
+                displayValidationError('name', 'Name is required.');
+                isValid = false;
+            } else {
+                hideValidationError('name');
+            }
+
+            if (phone.trim().length !== 11) {
+                displayValidationError('phone', 'Phone must be 11 characters.');
+                isValid = false;
+            } else {
+                hideValidationError('phone');
+            }
+
+            if (!isValidEmail(email)) {
+                displayValidationError('email', 'Email must be in a valid format.');
+                isValid = false;
+            } else {
+                hideValidationError('email');
+            }
+
+            // If data is valid, send an AJAX call to save the changes
+            if (isValid) {
+                $.ajax({
+                    type: 'Put',
+                    url: `http://localhost:5022/api/Student`,
+                    contentType: 'application/json',
+                    data: JSON.stringify({ id: id, name: name, phone: phone, email: email }),
+                    success: function () {
+                        // after successful edit Redirect to the index view
+                        window.location.href = 'http://localhost:5010/Student';
+                    },
+                    error: function (error) {
+                        console.error('Error saving changes: ', error);
+                    }
+                });
+            }
+        });
+
+        // validate email using regexp
+        function isValidEmail(email) {
+            var emailRegex = new RegExp(@Html.Raw(Json.Serialize(emailRegexPattern)));
+            return emailRegex.test(email);
+        }
+
+        // display validation error messages
+        function displayValidationError(field, message) {
+            $('#' + field + 'Error').text(message);
+        }
+
+        // hide validation error messages
+        function hideValidationError(field) {
+            $('#' + field + 'Error').text('');
+        }
+    });
+</script>

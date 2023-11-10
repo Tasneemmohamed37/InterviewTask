@@ -1,0 +1,85 @@
+﻿@model List<Student>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Students</h1>
+<hr/>
+@if (ViewBag.SuccessMessage != null)
+{
+    <div class="alert alert-success" role="alert">
+        @ViewBag.SuccessMessage
+    </div>
+}
+<a asp-action="New" asp-controller="Student" class="btn btn-success">+ Add</a><br />
+<br/>
+<table id="studentTable" class="table table-striped">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Handle</th>
+    </tr>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Function to handle delete button click
+        function deleteStudent(id) {
+            $.ajax({
+                type: 'DELETE',
+                url: `http://localhost:5022/api/Student/${id}`,
+                success: function () {
+                    // If successful, remove this student from table
+                    $(`#studentRow_${id}`).remove();
+                },
+                error: function (error) {
+                    console.error('Error deleting student: ', error);
+                }
+            });
+        }
+
+        $.ajax({
+            type: 'GET',
+            url: 'http://localhost:5022/api/Student/All',
+            success: function (data) {
+                // Update the table with the returned data
+                $.each(data, function (index, student) {
+                    $('#studentTable').append(`
+                                <tr id="studentRow_${student.id}">
+                                    <td>${index+1}</td>
+                                    <td>${student.name}</td>
+                                    <td>${student.phone}</td>
+                                    <td>${student.email}</td>
+                                    <td>
+                                      <a href="#" asp-action="Edit" asp-controller="Student" class="edit-link" style="color: rgb(27, 148, 11);" data-id="${student.id}">Edit</a> |
+                                      <a href="#" class="delete-link" style="color: rgb(27, 148, 11);" data-id="${student.id}">Delete</a>
+                                    </td>
+                                </tr>
+                            `);
+                });
+                // Add click event handler for edit 
+                $('.edit-link').click(function (e) {
+                    e.preventDefault();
+                    var studentId = $(this).data('id');
+                    window.location.href = 'http://localhost:5010/Student/Edit/' + studentId;
+                });
+
+                // Add click event handler for delete 
+                $('.delete-link').click(function (e) {
+                    e.preventDefault();
+                    var studentId = $(this).data('id');
+                    if (confirm('Are you sure you want to delete this student?')) {
+                        deleteStudent(studentId);
+                    }
+                });
+            },
+            error: function (error) {
+                console.error('Error calling API: ', error);
+            }
+        });
+    });
+</script>
+

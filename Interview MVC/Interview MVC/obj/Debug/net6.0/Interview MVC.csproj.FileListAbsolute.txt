@@ -1,0 +1,33 @@
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\bin\Debug\net6.0\appsettings.json
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\bin\Debug\net6.0\Interview MVC.staticwebassets.runtime.json
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\bin\Debug\net6.0\Interview MVC.exe
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\bin\Debug\net6.0\Interview MVC.deps.json
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\bin\Debug\net6.0\Interview MVC.runtimeconfig.json
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\bin\Debug\net6.0\Interview MVC.dll
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\bin\Debug\net6.0\Interview MVC.pdb
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\Interview MVC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\Interview MVC.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\Interview MVC.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\Interview MVC.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\Interview MVC.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\Interview MVC.RazorAssemblyInfo.cache
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\Interview MVC.RazorAssemblyInfo.cs
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\staticwebassets\msbuild.Interview MVC.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\staticwebassets\msbuild.build.Interview MVC.props
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Interview MVC.props
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Interview MVC.props
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\scopedcss\bundle\Interview MVC.styles.css
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\scopedcss\projectbundle\Interview MVC.bundle.scp.css
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\Interview MVC.dll
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\refint\Interview MVC.dll
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\Interview MVC.pdb
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\Interview MVC.genruntimeconfig.cache
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\ref\Interview MVC.dll
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\Interview MVC.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\back\Interview MVC\Interview MVC\obj\Debug\net6.0\Interview MVC.csproj.CopyComplete

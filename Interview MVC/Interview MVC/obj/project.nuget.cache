@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "9cQqSh6kA71J/ABhk6WkhUcpQprRcbRG4AUh7UT6sa5UXHMGDmesjIIUB+pBJpMYYIeMDX4/09d1xcBJorxF4g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Administrator\\Desktop\\back\\Interview MVC\\Interview MVC\\Interview MVC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\bootstrap\\5.3.2\\bootstrap.5.3.2.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
